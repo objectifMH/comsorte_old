@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html, body { height: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+body { margin: 0; 
+    scroll-behavior: smooth;
+
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+$color_primary:#ebe2bf;
+$color_second:#862222;
+
+
+.bg_linear {
+    background: linear-gradient(150deg, #862222 0%, #ded097 100%);
+
+}
+    

@@ -17,7 +17,7 @@ header {
 
         .logo {
             img {
-                width: 250px;
+                width: 170px;
                 padding: 4px 0px;
             }
         }
@@ -25,7 +25,7 @@ header {
         .menu {
             .material-icons {
                 color: $color_second;
-                font-size: 2.6rem;
+                font-size: 2rem;
                 cursor: pointer;
                 transition: .3s ease-in-out;
                 text-shadow: rgba(255,255,255,.75) 2px 2px;
@@ -145,10 +145,10 @@ section.first {
 
     .landing {
 
-        margin-top: 80px;
+        margin-top: 20px;
 
         h1 {    
-            font-size: 10rem;
+            font-size: 8rem;
             font-weight: 700;
             background: -webkit-linear-gradient(150deg, white 0%, $color_second 100%);
             background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
@@ -157,12 +157,12 @@ section.first {
             letter-spacing: .2px;
             font-family: 'Poppins', sans-serif !important; 
             text-align: center;
-            letter-spacing: -13px;
+            letter-spacing: -10px;
 
             .c_premier {
-                font-size: 21rem;
+                font-size: 17rem;
                 position: relative;
-                top: 70px;
+                top: 60px;
                 left: 60px;
                 color: $color_primary;
                 -webkit-text-fill-color: $color_second;
@@ -179,7 +179,8 @@ section.first {
             letter-spacing: 2px;
 
             position: relative;
-            top: -40px;
+            top: -20px;
+            right: -85px;
             text-align: center;
         }
 
@@ -193,6 +194,7 @@ section.first {
             font-weight: 700;
             transition: 0.4s ease-in-out;
             margin-top: 40px;
+            transform: translateY(-20px);
 
             &:hover {
                 letter-spacing: 1.2px;
@@ -245,7 +247,7 @@ section.second {
         
         .presentation_haut {
             width: 50%;
-            height: 85vh;
+            height: 95vh;
             position: relative;
             display: flex;
             justify-content: center;

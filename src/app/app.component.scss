@@ -88,11 +88,13 @@ header {
                     text-decoration: none;
                     //font-family: 'Cookie', cursive !important;
 
-                    text-transform: uppercase;
+                    //text-transform: uppercase;
                     font-weight: 700;
                     transition: 0.4s ease-in-out;
 
                     background: -webkit-linear-gradient(150deg, $color_second 0%, $color_primary 100%);
+                    background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
+
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
 
@@ -200,7 +202,6 @@ section.first {
                 letter-spacing: 1.2px;
             }
         }
-
     }
     
     .svg_haut {
@@ -234,6 +235,7 @@ section.second {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: "Poppins", sans-serif !important;
+        position: relative;    
     }
 
     .presentation {
@@ -276,9 +278,7 @@ section.second {
         .presentation_bas {
             padding: 65px 30px;
             height: 85vh;
-            width: 50%;
-            //background: green;
-            
+            width: 50%;         
             margin-top: 35px;
 
             .nom_prenom {
@@ -299,8 +299,7 @@ section.second {
                 position: relative;
                 top: -50px;
                 margin-bottom: 30px; 
-                line-height: 0.8;      
-                
+                line-height: 0.8;                  
             }
 
             p {
@@ -309,7 +308,6 @@ section.second {
                 line-height: 1;   
                 font-weight: 500;
                 font-family: 'Cookie', cursive !important;
-
             }
 
             .contacter {
@@ -343,16 +341,27 @@ section.third {
     padding: 0px 0px 380px;
 
     .title {
-    
-        font-size: 3rem;
-        font-weight: 700;
+        
         padding-top: 20px;
         padding-bottom: 60px;
-        text-align: center;
-        background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-family: "Poppins", sans-serif !important;
+    
+        span {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: "Poppins", sans-serif !important; 
+
+            border: 6px solid;
+            padding: 5px 15px;
+            border-radius: 15px;
+
+            border-image: linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
+            border-image: linear-gradient(#ffc107cc, $color_second) 10;
+
+        }
         
     }
 
@@ -409,7 +418,6 @@ section.third {
             &:hover {
                 transform: scale(1.05);
                 box-shadow: 3px 4px 12px rgba(0,0,0,.55); 
-
             }
         }
     }
@@ -427,7 +435,7 @@ section.fourth {
 
 
     h4 {
-        font-size: 4.2rem;
+        font-size: 3.2rem;
         color: white;
         font-family: 'Cookie', cursive !important;
         letter-spacing: 1.7px;
@@ -449,9 +457,6 @@ section.fourth {
         }
     }
 }
-
-
-
 
 .bas {
     svg {

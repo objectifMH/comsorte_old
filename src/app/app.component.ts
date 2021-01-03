@@ -86,6 +86,16 @@ export class AppComponent{
       this.errorNom = this.contactForm.controls.nom.status === "VALID" ? false : true;
     }
   }
+
+  onFocusMethod(e) {
+    e.srcElement.parentNode.classList.add("focus");
+  }
+
+  onBlurMethod(e) {
+    let attr = e.target.id;
+    if (this.contactForm.value[attr] === "")
+      e.srcElement.parentNode.classList.remove("focus");
+  }
 }
 
 

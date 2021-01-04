@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -21,6 +21,8 @@ export class AppComponent{
   errorMail = false;
   errorNom = false;
   errorMessage = false;
+
+  isEtudiantActive = true; 
 
   contactForm: FormGroup;
   constructor(private fb: FormBuilder, private httpClient: HttpClient) {
@@ -95,6 +97,25 @@ export class AppComponent{
     let attr = e.target.id;
     if (this.contactForm.value[attr] === "")
       e.srcElement.parentNode.classList.remove("focus");
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+    let element = document.querySelector('header');
+    if (window.pageYOffset > element.clientHeight) {
+      element.classList.add('opacity_true');
+      //Scrolling 
+    } else {
+      element.classList.remove('opacity_true');
+    }
+  }
+
+  clickEtudiantActive(){
+    this.isEtudiantActive = true;
+  }
+
+  clickSalActive(){
+    this.isEtudiantActive = false;
   }
 }
 

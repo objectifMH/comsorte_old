@@ -13,7 +13,7 @@ const routes: Routes = [
     useHash: true,
     onSameUrlNavigation: 'reload',
     relativeLinkResolution: 'legacy',
-    scrollPositionRestoration: 'enabled',
+    //scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled',
   })],
 exports: [RouterModule]

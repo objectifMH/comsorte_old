@@ -4,9 +4,9 @@
 header {
     
     //background: linear-gradient(150deg,white, #279cc4);;
-    background: white;
+    background: transparent;
     position: fixed;
-    box-shadow: 3px 4px 12px rgba(0,0,0,.15);
+    //box-shadow: 3px 4px 12px rgba(0,0,0,.15);
     z-index: 100;
 
     .nav_header {
@@ -19,6 +19,8 @@ header {
             img {
                 width: 170px;
                 padding: 4px 0px;
+                opacity: 0;
+                transform: translateX(-100%);
             }
         }
 
@@ -122,6 +124,35 @@ header {
 
     .menu_bar.fade_menu {
         right: 0;
+        opacity: 1;
+    }
+}
+
+header.opacity_true {
+    opacity: 0.98 ;
+    //background: linear-gradient(150deg, $color_dark 0%, $color_light 100%);
+    background: white;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);       
+    .nav_menu {
+        a, .search_material, li{     
+            color: white !important;
+        }
+    }
+
+    
+    .nav_header {
+        .logo {
+            img {
+                transition: 1s ease-in-out;
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+    
+
+    transition: 0.2s ease-in-out;
+    &:hover {
         opacity: 1;
     }
 }
@@ -514,9 +545,8 @@ section.fourth {
 section.five {
 
     background: white;
-    min-height: 400px;
+    min-height: 600px;
     position: relative;
-    margin-top: 80px;
 
     .title {
     
@@ -542,6 +572,214 @@ section.five {
                 border-image: linear-gradient(271deg, #ffc107cc, #862222) 10;
             }
         }     
+    }
+
+}
+
+section.five.price{
+
+    background: $color_primary;
+    //background: -webkit-linear-gradient(212deg, white 36%, $color_primary 90%);
+    min-height: 700px;
+    position: relative;
+
+    .svg_haut {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: rotate(180deg);
+        svg {
+            background: white;
+            path {
+                fill: $color_primary;
+            }
+        }
+    }
+
+    .title {
+    
+        font-size: 2rem;
+        font-weight: 700;   
+        text-align: center;
+        background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Poppins", sans-serif !important;
+        position: relative; 
+        margin-bottom: 90px; 
+        
+        span {
+
+            &:before {
+                content: "";
+                bottom: 0;
+                left: 40%;
+                width: 20%;
+                position: absolute;
+                border: 2px solid;
+                -o-border-image: linear-gradient(271deg, #ffc107cc, #862222) 10;
+                border-image: linear-gradient(271deg, #ffc107cc, #862222) 10;
+            }
+        }     
+    }
+
+    .title-price {
+        margin: 0; 
+        color: $color_second;
+        font-size: 50px;
+        font-weight: 500;
+        margin-bottom: 45px;
+        font-family: "Cookie", cursive !important;
+        letter-spacing: 1.7px;
+
+    }
+
+    .text {
+        margin: 0;
+        font-size: 20px;
+        color: $color_second;
+    }
+
+    .tab-btn {
+        display: flex;
+        margin-top: 90px;
+    }
+
+    .single {
+        display: inline-block;
+        vertical-align: middle;
+        background-color: #fbf8f4;
+        color: $color_second;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 9px 32px;
+        transition: all .4s ease;
+    }
+
+    .single:first-child {
+        border-top-left-radius: 30.5px;
+        border-bottom-left-radius: 30.5px;
+    }
+
+    .single:last-child { 
+        border-top-right-radius: 30.5px;
+        border-bottom-right-radius: 30.5px;
+    }
+
+    .single:hover, .single.active {
+        background-color: $color_second;
+        color: $color_primary;
+        letter-spacing: 1px;
+    }
+
+    .content {
+        position: relative;
+
+    }
+
+    .one {
+        width: 100%;
+        max-width: 370px;
+        filter: drop-shadow(10px 0px 60px rgba(42, 45, 59, 0.1));
+        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(.85) translateX(270px) translateY(-15px);
+        transition: transform .4s ease-in-out;
+    }
+
+    .one.active {
+        z-index: 20;
+        transform: scale(1) translateX(0) translateY(0);
+    }
+
+    .inner {
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 80px;
+        background-color: $color_second;
+        border: 3px solid white;
+        border-radius: 10px;
+        color: white;
+
+        clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+    }
+
+    .price {
+        font-size: 60px;
+        color: $color_primary;
+        margin-bottom: 15px;
+    }
+
+    .currency {
+        font-size: 25px;
+        display: inline-block;
+        vertical-align: super;
+    }
+
+    .time {
+        font-size: 14px;
+        color: $color_primary;
+        font-weight: 500;
+        text-transform: uppercase;
+        vertical-align: baseline;
+        letter-spacing: 0.04rem;
+        margin-left: 5px;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 20px;
+        color: $color_primary;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    .item {
+        font-size: 18px;
+        color: white;
+        line-height: 1.5rem;
+    }
+
+    .list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 30px;
+        margin-top: 20px;
+
+    }
+
+    .thm-btn {
+        display: inline-block;
+        vertical-align: middle;
+        border: $color_primary 2px solid;
+        //outline: none;
+        cursor: pointer;
+        background: $color_primary;
+        color: $color_second;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 8px 25px;
+        border-radius: 30px;
+        transition: .5s ease-in-out;
+        letter-spacing: 1px;
+
+        
+
+        &:hover {
+            background: $color_second;
+            color: $color_primary;
+            transform: scale(1.05);
+            
+        }
     }
 }
 
@@ -660,7 +898,7 @@ section.seven {
                     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.6);
                     overflow: hidden;
                     display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                    //grid-template-columns: repeat(2, 1fr);
                 }
 
                 .contact-info {
@@ -669,42 +907,15 @@ section.seven {
                         position: relative;
                         background: #c780098a;
                         color: white;
-
-                        .carre {
-                            width: 100px;
-                            height: 100px;
-                            background: linear-gradient(1deg, transparent 10% , $color_primary);
-                            position: absolute;
-                            
-    
-                            &.un {
-                                width: 60px;
-                                height: 50px;
-                                top: 298px;
-                                transform: rotate(162deg);
-                                background-color: red;
-                                animation-delay: 3s;
-                                animation: slideDownContact1 25s infinite;
-                            }
-    
-                            &.deux {
-                                width: 40px;
-                                height: 40px;
-                                top: 252px;
-                                right: 39px;
-                                transform: rotate(21deg);
-                                background: green;
-                                animation-delay: 12s;
-                                animation: slideDownContact2 25s infinite;
-                            }
-                        }
                     
                     .titre {
                         color: white;
                         font-weight: 500;
-                        font-size: 1.5rem;
+                        font-size: 2.5rem;
                         line-height: 1;
                         margin-bottom: 0.7rem;
+                        font-family: "Cookie", cursive !important;
+                        letter-spacing: 1.7px;
                     }
 
                     .info_container {
@@ -739,6 +950,20 @@ section.seven {
                             }      
                         }
                     } 
+
+                    img {
+                        height: 250px;
+                        position: absolute;
+                        top: 56px;
+                        right: 53px;
+                    }
+
+                    .tache {
+                        position: absolute;
+                        top: -17px;
+                        right: 39px;
+                        width: 394px;
+                    }
                     
                     .reseaux_contact {
                         width: 150px;
@@ -771,66 +996,6 @@ section.seven {
                     position: relative;
                     background: $color_second;
 
-                    &:before {
-                        content:"";
-                        position: absolute;
-                        width: 30px;
-                        height: 30px;
-                        background-color: #206894;
-                        top: 50px;
-                        left: -14px;
-                        transform: rotate(45deg);
-                    }
-
-                    .circle {
-                        width: 100px;
-                        height: 100px;
-                        border-radius: 50%;
-                        background: linear-gradient(121deg, transparent 20% , $color_second);
-                        position: absolute;
-
-                        &.un {
-                            width: 130px;
-                            height: 130px;
-                            top: 130px;
-                            right: -40px;
-                            animation-delay: 2s;
-                            animation: slideDownContact2 25s infinite;
-                            
-                        }
-
-                        &.deux {
-                            width: 80px;
-                            height: 80px;
-                            top: 282px;
-                            right: 217px;
-                            animation-delay: 8s;
-                            animation: slideDownContact1 15s infinite;
-                    
-                        }
-
-                        &.trois {
-                            width: 90px;
-                            height: 90px;
-                            top: 82px;
-                            right: 174px;
-                            animation-delay: 12s;
-                            animation: slideDownContact2 25s infinite;
-                            
-                        }
-
-                        &.quatre {
-                            width: 290px;
-                            height: 290px;
-                            top: 82px;
-                            right: 174px;
-                            animation-delay: 18s;
-                            animation: slideDownContact1 20s infinite;
-                            
-                        }
-
-                    }
-
                     form {
                         padding: 2.3rem 2.2rem 3.5rem;
                         z-index: 10;
@@ -838,12 +1003,14 @@ section.seven {
                         position: relative;
 
                         .titre {
-                            color: $color_second;
+                            color: $color_primary;
                             font-weight: 500;
-                            font-size: 1.5rem;
+                            font-size: 2.5rem;
                             line-height: 1;
                             margin-bottom: 0.7rem;
                             padding-bottom: 30px;
+                            font-family: "Cookie", cursive !important;
+                            letter-spacing: 1.7px;
                         }
 
                         .form-group {
@@ -871,7 +1038,7 @@ section.seven {
                                     height: 5px;
                                     top: 50%;
                                     transform: translateY(-50%);
-                                    background: #206894;
+                                    background: $color_second;
                                     transition: 0.3s;
 
                                 }

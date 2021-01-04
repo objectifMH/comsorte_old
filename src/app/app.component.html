@@ -3,7 +3,7 @@
   <nav class=" nav_header">
 
     <!-- Logo  -->
-    <div class="logo" data-aos="fade-left" data-aos-duration="2000">
+    <div class="logo" >
       <!-- <span class="nom_prenom">Anais. S.</span> -->
       <img src="assets/comS.jpg">
     </div>
@@ -220,14 +220,111 @@
   </div>
 
 </section>
-<!-- Waves  -->
-<div style="height: 150px; overflow: hidden;" class="bas">
+
+
+<section class="five price">
+
+  <!-- Waves  -->
+<div style="height: 150px; overflow: hidden;" class="svg_haut">
   <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
     <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;">
     </path>
   </svg>
 </div>
 <!-- Fin waves  -->
+
+  <div class="container_first">
+    <!-- Title  -->
+    <div class="title container">
+      <span>
+        .Nos tarifs
+      </span>
+    </div>
+    <!-- Fin title  -->
+
+  </div>
+
+  <div class="price-one" id="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="title-price"> Choisissez votre formule </h2>
+          <p class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non labore nostrum neque architecto laboriosam corrupti, laudantium commodi sed nisi, corporis amet temporibus officia autem odit. Quos exercitationem quas omnis temporibus.
+          </p>
+          <div class="tab-btn" id="tab-title">
+            <a href="#etudiants" class="single " [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}" (click)="clickEtudiantActive()"> Etudiants</a>
+            <a href="#salaries" class="single  " [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}" (click)="clickSalActive()"> Salariés </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="content" >
+            <!-- Cours  -->
+            <div class="one "  id="cours"  [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}">
+              <div class="inner">
+                <div class="price">
+                  <span class="amount">15</span>
+                  <span class="currency">€</span>
+                  
+                  <span class="time">/heure</span>
+                </div>
+
+                <h3 class="name">
+                  Etudiants
+                </h3>
+                <ul class="list">
+                  <li class="item">2 fois par semaines</li>
+                  <li class="item">Soutiens scolaires</li>
+                  <li class="item">Stages de vacances</li>
+                  <li class="item">Vidéo conférence</li>
+                  <li class="item">Support 5j/7</li>
+                </ul>
+
+                <a href="" class="thm-btn">Choisissez</a>
+              </div>
+            </div>
+            <!-- Fin cours -->
+
+            <!-- Formations  -->
+            <div class="one" id="formations" [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}">
+              <div class="inner">
+                <div class="price">
+                  <span class="amount">25</span>
+                  <span class="currency">€</span>
+                  
+                  <span class="time">/heure</span>
+                </div>
+
+                <h3 class="name">
+                  Salariés
+                </h3>
+                <ul class="list">
+                  <li class="item">5 fois par semaines</li>
+                  <li class="item">Cours de nuit</li>
+                  <li class="item">Stages de vacances</li>
+                  <li class="item">Vidéo conférence</li>
+                  <li class="item">Support 5j/7</li>
+                </ul>
+
+                <a href="" class="thm-btn">Choisissez</a>
+              </div>
+            </div>
+            <!-- Fin formations  -->
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 <section class="six">
 
   <div class="container_first">
@@ -264,41 +361,44 @@
       <div class="form">
         <!-- contact  -->
         <div class="contact-info ">
-          <span class="carre un" data-aos="zoom-in-up" data-aos-duration="2000"></span>
-          <span class="carre deux" data-aos="zoom-in-up" data-aos-duration="3000"></span>
-
+        
           <h3 class="titre">Me contacter </h3>
           <div class="info_container">
-            <div data-aos="zoom-in-up" data-aos-duration="3000">
+            <div data-aos="fade-left" data-aos-duration="3000">
               <span class="material-icons">
                 location_on
               </span>
               <p>
-                Avenue Charles&nbsp;Flahaut
+                Avenue &nbsp;Pierre Boulot
                 <br />
                 34090, Montpellier
               </p>
             </div>
-            <div data-aos="zoom-in-up" data-aos-duration="3000">
+            <div data-aos="fade-left" data-aos-duration="3000">
               <span class="material-icons">
                 phone
               </span>
               <p>
-                +33 (0)6 87 43 57 61
+                +33 (0)6 12 23 34 45
               </p>
             </div>
-            <div class="contact" data-aos="zoom-in-up" data-aos-duration="3000">
+            <div class="contact" data-aos="fade-left" data-aos-duration="3000">
               <a href="mailto:mhatchi@yahoo.fr">
                 <span class="material-icons">
                   mail
                 </span>
               </a>
               <p>
-                mhatchi@yahoo.fr
+                contact@comsorte.fr
               </p>
             </div>
 
           </div>
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="tache" data-aos="fade-right" data-aos-duration="3000"> 
+            <path fill="#862222" d="M40.1,-66.6C51.4,-62.8,59.8,-51.1,61.3,-38.7C62.7,-26.3,57.2,-13.1,57.5,0.2C57.8,13.5,63.9,26.9,62.1,38.7C60.3,50.5,50.6,60.7,38.9,62.2C27.2,63.7,13.6,56.7,-0.5,57.4C-14.5,58.2,-29.1,66.9,-38.1,63.8C-47.1,60.7,-50.5,46,-51.7,33.4C-52.9,20.8,-51.7,10.4,-52.9,-0.7C-54.2,-11.8,-57.7,-23.6,-54.8,-33.2C-51.9,-42.8,-42.6,-50.1,-32.4,-54.5C-22.1,-58.9,-11.1,-60.3,1.6,-63.2C14.3,-66,28.7,-70.3,40.1,-66.6Z" transform="translate(100 100)" />
+          </svg>
+          <img src="../assets/anais.png" data-aos="fade-right" data-aos-duration="3000">
+
           <!-- reseaux  -->
 
           <div class="reseaux_contact">
@@ -315,11 +415,7 @@
         </div>
         <!-- formulaire contact  -->
         <div class="contact-form">
-          <span class="circle un" data-aos="zoom-in-up" data-aos-duration="4000"></span>
-          <span class="circle deux" data-aos="zoom-in-up" data-aos-duration="3000"></span>
-          <span class="circle trois" data-aos="zoom-in-up" data-aos-duration="2000"></span>
-
-
+          
           <form [formGroup]="contactForm">
             <h3 class="titre">Envoyez un message</h3>
             <div class="form-group  ">

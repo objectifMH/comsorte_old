@@ -253,8 +253,8 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non labore nostrum neque architecto laboriosam corrupti, laudantium commodi sed nisi, corporis amet temporibus officia autem odit. Quos exercitationem quas omnis temporibus.
           </p>
           <div class="tab-btn" id="tab-title">
-            <a href="#etudiants" class="single " [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}" (click)="clickEtudiantActive()"> Etudiants</a>
-            <a href="#salaries" class="single  " [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}" (click)="clickSalActive()"> Salariés </a>
+            <div  class="single " [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}" (click)="clickEtudiantActive()"> Etudiants</div>
+            <div  class="single  " [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}" (click)="clickSalActive()"> Salariés </div>
           </div>
         </div>
 

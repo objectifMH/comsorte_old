@@ -3,7 +3,7 @@
   <nav class=" nav_header">
 
     <!-- Logo  -->
-    <div class="logo" >
+    <div class="logo">
       <!-- <span class="nom_prenom">Anais. S.</span> -->
       <img src="assets/comS.jpg">
     </div>
@@ -62,7 +62,7 @@
   <div class="container">
     <div class="landing">
       <h1 data-aos="fade-left" data-aos-duration="3000">
-        <span class="c_premier" >C</span>om'<span class="s_premier">S</span>orte
+        <span class="c_premier">C</span>om'<span class="s_premier">S</span>orte
       </h1>
       <h3 data-aos="fade-right" data-aos-duration="1000">
         Votre institut de formation
@@ -70,10 +70,10 @@
       <p data-aos="fade-left" data-aos-duration="3000">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente distinctio quis dignissimos sint velit.
       </p>
-  
+
       <!-- Buttons -->
       <div class="text-center text-md-center">
-        <a href="overview.html" class="btn  savoir_plus shadow lift mr-1">
+        <a [routerLink]="['/main']" fragment="faq" class="btn savoir_plus">
           En savoir plus</a>
       </div>
 
@@ -138,7 +138,6 @@
       </div>
       <!-- Fin Bas  -->
     </div>
-    <hr>
   </div>
 
 </section>
@@ -201,23 +200,134 @@
 
   <!-- Buttons -->
   <div class="text-center text-md-center">
-    <a href="overview.html" class="btn  contacter shadow lift mr-1">
+    <a [routerLink]="['/main']" fragment="contacter" class="btn  contacter shadow lift mr-1">
       Me contacter</a>
   </div>
 </section>
 
-<section class="five">
+<section class="five faq" id="faq">
 
   <div class="container_first">
     <!-- Title  -->
     <div class="title container">
       <span>
-        .etc five
+        .Foire aux questions
       </span>
     </div>
     <!-- Fin title  -->
-
   </div>
+
+  <div class="container faq">
+    <!-- haut  -->
+    <div class="faq_haut" data-aos="fade-right" data-aos-duration="3000">
+      <div class="box_img">
+        <img src="assets/faq_b.svg">
+      </div>
+    </div>
+    <!-- Fin haut  -->
+
+    <!-- Bas  -->
+    <div class="faq_bas" data-aos="fade-left" data-aos-duration="2000">
+
+      <!-- question 1 -->
+      <div class="question">
+        <input type="checkbox" id="sidebar-toggle1">
+        
+        <div class="accordion">
+          <h5>Question 1 </h5>
+
+          <label for="sidebar-toggle1">
+            <span class="material-icons icon">
+            </span>
+          </label>
+        </div>
+
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est repellat nam ab dolorem architecto sit
+            excepturi, fugit tempora, voluptatem ipsum cumque nulla ea commodi amet, temporibus natus error ratione
+            veniam?
+          </p>
+        </div>
+
+      </div>
+      <!-- Fin question 1  -->
+
+      <!-- question 2 -->
+      <div class="question">
+        <input type="checkbox" id="sidebar-toggle2">
+        
+        <div class="accordion">
+          <h5>Lorem, ipsum doorum repellat. Reiciendis, iure sunt. </h5>
+
+          <label for="sidebar-toggle2">
+            <span class="material-icons icon">
+            </span>
+          </label>
+        </div>
+
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est repellat nam ab dolorem architecto sit
+            excepturi
+          </p>
+        </div>
+
+      </div>
+      <!-- Fin question 2  -->
+
+      <!-- question 3 -->
+      <div class="question">
+        <input type="checkbox" id="sidebar-toggle3">
+        
+        <div class="accordion">
+          <h5>Question 3 </h5>
+
+          <label for="sidebar-toggle3">
+            <span class="material-icons icon">
+            </span>
+          </label>
+        </div>
+
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+
+      </div>
+      <!-- Fin question 3  -->
+
+      <!-- question 4 -->
+      <div class="question">
+        <input type="checkbox" id="sidebar-toggle4">
+        
+        <div class="accordion">
+          <h5>Question 4 </h5>
+
+          <label for="sidebar-toggle4">
+            <span class="material-icons icon">
+            </span>
+          </label>
+        </div>
+
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est repellat nam ab dolorem architecto sit
+            excepturi, fugit tempora, voluptatem ipsum cumque nulla ea commodi amet, temporibus natus error ratione
+            veniam?
+          </p>
+        </div>
+
+      </div>
+      <!-- Fin question 4 -->
+
+
+    </div>
+    <!-- Fin Bas  -->
+  </div>
+
+
 
 </section>
 
@@ -225,13 +335,13 @@
 <section class="five price">
 
   <!-- Waves  -->
-<div style="height: 150px; overflow: hidden;" class="svg_haut">
-  <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-    <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;">
-    </path>
-  </svg>
-</div>
-<!-- Fin waves  -->
+  <div style="height: 150px; overflow: hidden;" class="svg_haut">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;">
+      </path>
+    </svg>
+  </div>
+  <!-- Fin waves  -->
 
   <div class="container_first">
     <!-- Title  -->
@@ -250,23 +360,27 @@
         <div class="col-lg-6">
           <h2 class="title-price"> Choisissez votre formule </h2>
           <p class="text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non labore nostrum neque architecto laboriosam corrupti, laudantium commodi sed nisi, corporis amet temporibus officia autem odit. Quos exercitationem quas omnis temporibus.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non labore nostrum neque architecto laboriosam
+            corrupti, laudantium commodi sed nisi, corporis amet temporibus officia autem odit. Quos exercitationem quas
+            omnis temporibus.
           </p>
           <div class="tab-btn" id="tab-title">
-            <div  class="single " [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}" (click)="clickEtudiantActive()"> Etudiants</div>
-            <div  class="single  " [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}" (click)="clickSalActive()"> Salariés </div>
+            <div class="single " [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}"
+              (click)="clickEtudiantActive()"> Etudiants</div>
+            <div class="single  " [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}"
+              (click)="clickSalActive()"> Salariés </div>
           </div>
         </div>
 
         <div class="col-lg-6">
-          <div class="content" >
+          <div class="content">
             <!-- Cours  -->
-            <div class="one "  id="cours"  [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}">
+            <div class="one " id="cours" [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}">
               <div class="inner">
                 <div class="prix">
                   <span class="amount">15</span>
                   <span class="currency">€</span>
-                  
+
                   <span class="time">/heure</span>
                 </div>
 
@@ -292,7 +406,7 @@
                 <div class="prix">
                   <span class="amount">25</span>
                   <span class="currency">€</span>
-                  
+
                   <span class="time">/heure</span>
                 </div>
 
@@ -326,7 +440,6 @@
 
 
 <section class="six">
-
   <div class="container_first">
     <!-- Title  -->
     <div class="title container">
@@ -339,8 +452,8 @@
   </div>
 
 </section>
-<section class="seven">
 
+<section class="seven" id="contacter">
   <div class="container_first">
     <!-- Title  -->
     <div class="title container">
@@ -361,7 +474,7 @@
       <div class="form">
         <!-- contact  -->
         <div class="contact-info ">
-        
+
           <h3 class="titre">Me contacter </h3>
           <div class="info_container">
             <div data-aos="fade-left" data-aos-duration="3000">
@@ -394,8 +507,11 @@
             </div>
 
           </div>
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="tache" data-aos="fade-right" data-aos-duration="3000"> 
-            <path fill="#862222" d="M40.1,-66.6C51.4,-62.8,59.8,-51.1,61.3,-38.7C62.7,-26.3,57.2,-13.1,57.5,0.2C57.8,13.5,63.9,26.9,62.1,38.7C60.3,50.5,50.6,60.7,38.9,62.2C27.2,63.7,13.6,56.7,-0.5,57.4C-14.5,58.2,-29.1,66.9,-38.1,63.8C-47.1,60.7,-50.5,46,-51.7,33.4C-52.9,20.8,-51.7,10.4,-52.9,-0.7C-54.2,-11.8,-57.7,-23.6,-54.8,-33.2C-51.9,-42.8,-42.6,-50.1,-32.4,-54.5C-22.1,-58.9,-11.1,-60.3,1.6,-63.2C14.3,-66,28.7,-70.3,40.1,-66.6Z" transform="translate(100 100)" />
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="tache" data-aos="fade-right"
+            data-aos-duration="3000">
+            <path fill="#862222"
+              d="M40.1,-66.6C51.4,-62.8,59.8,-51.1,61.3,-38.7C62.7,-26.3,57.2,-13.1,57.5,0.2C57.8,13.5,63.9,26.9,62.1,38.7C60.3,50.5,50.6,60.7,38.9,62.2C27.2,63.7,13.6,56.7,-0.5,57.4C-14.5,58.2,-29.1,66.9,-38.1,63.8C-47.1,60.7,-50.5,46,-51.7,33.4C-52.9,20.8,-51.7,10.4,-52.9,-0.7C-54.2,-11.8,-57.7,-23.6,-54.8,-33.2C-51.9,-42.8,-42.6,-50.1,-32.4,-54.5C-22.1,-58.9,-11.1,-60.3,1.6,-63.2C14.3,-66,28.7,-70.3,40.1,-66.6Z"
+              transform="translate(100 100)" />
           </svg>
           <img src="assets/anais.png" data-aos="fade-right" data-aos-duration="3000">
 
@@ -415,25 +531,21 @@
         </div>
         <!-- formulaire contact  -->
         <div class="contact-form">
-          
+
           <form [formGroup]="contactForm">
             <h3 class="titre">Envoyez un message</h3>
             <div class="form-group  ">
 
-              <input type="text" class="form-control" required formControlName="nom" id="nom" (blur)="onBlurMethod($event)"
-                (focus)="onFocusMethod($event)"
-                [ngClass]="{'errorForm': errorNom }"
-                >
+              <input type="text" class="form-control" required formControlName="nom" id="nom"
+                (blur)="onBlurMethod($event)" (focus)="onFocusMethod($event)" [ngClass]="{'errorForm': errorNom }">
               <label for="">Nom</label>
               <span>
                 Nom
               </span>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" required formControlName="mail" email="true" id="mail" (blur)="onBlurMethod($event)"
-                (focus)="onFocusMethod($event)"
-                [ngClass]="{'errorForm': errorMail }"
-                >
+              <input type="email" class="form-control" required formControlName="mail" email="true" id="mail"
+                (blur)="onBlurMethod($event)" (focus)="onFocusMethod($event)" [ngClass]="{'errorForm': errorMail }">
               <label for="">Mail</label>
               <span>
                 Mail
@@ -441,9 +553,7 @@
             </div>
             <div class="form-group">
               <textarea formControlName="message" required id="message" (blur)="onBlurMethod($event)"
-                (focus)="onFocusMethod($event)"
-                [ngClass]="{'errorForm': errorMessage }"
-                ></textarea>
+                (focus)="onFocusMethod($event)" [ngClass]="{'errorForm': errorMessage }"></textarea>
               <label class="label_textarea" for="">Message</label>
               <span>
                 Message

@@ -13,9 +13,9 @@ a {
     text-decoration: none;
 }
 
-body { margin: 0; 
+html, body {
+    margin: 0; 
     scroll-behavior: smooth;
-
     font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 

@@ -23,6 +23,7 @@ export class AppComponent{
   errorMessage = false;
 
   isEtudiantActive = true; 
+  isPlus = true; 
 
   contactForm: FormGroup;
   constructor(private fb: FormBuilder, private httpClient: HttpClient) {
@@ -116,6 +117,10 @@ export class AppComponent{
 
   clickSalActive(){
     this.isEtudiantActive = false;
+  }
+
+  clickIcon(){
+    console.log("plus - menos");
   }
 }
 

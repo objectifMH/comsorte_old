@@ -232,7 +232,7 @@
       <!-- question 1 -->
       <div class="question">
         <input type="checkbox" id="sidebar-toggle1">
-        
+
         <div class="accordion">
           <h5>Question 1 </h5>
 
@@ -256,7 +256,7 @@
       <!-- question 2 -->
       <div class="question">
         <input type="checkbox" id="sidebar-toggle2">
-        
+
         <div class="accordion">
           <h5>Lorem, ipsum doorum repellat. Reiciendis, iure sunt. </h5>
 
@@ -279,7 +279,7 @@
       <!-- question 3 -->
       <div class="question">
         <input type="checkbox" id="sidebar-toggle3">
-        
+
         <div class="accordion">
           <h5>Question 3 </h5>
 
@@ -301,7 +301,7 @@
       <!-- question 4 -->
       <div class="question">
         <input type="checkbox" id="sidebar-toggle4">
-        
+
         <div class="accordion">
           <h5>Question 4 </h5>
 
@@ -439,17 +439,91 @@
 </section>
 
 
-<section class="six">
+<section class="six testimonial">
+  <!-- Waves  -->
+  <div style="height: 150px; overflow: hidden;" class="svg_haut">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;">
+      </path>
+    </svg>
+  </div>
+  <!-- Fin waves  -->
+
+
   <div class="container_first">
     <!-- Title  -->
     <div class="title container">
-      <span>
+      <!-- <span>
         .Testimonial
-      </span>
+      </span> -->
     </div>
     <!-- Fin title  -->
 
   </div>
+
+  <div class="testimonial container ">
+
+    <owl-carousel-o [options]="customOptions_testimonial">
+      <ng-template carouselSlide>
+        <div class="box_text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vero eum optio deleniti soluta labore
+            tempora provident, voluptatibus dolor expedita, et est.
+          </p>
+          <span class="nom">Lise</span>
+          <span class="prenom">nabs</span>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="box_text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vero eum optio deleniti soluta labore
+            tempora provident, voluptatibus dolor expedita, et est.
+          </p>
+          <span class="nom">Noemie</span>
+          <span class="prenom">BigChill</span>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="box_text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vero eum optio deleniti soluta labore
+            tempora provident, voluptatibus dolor expedita, et est.
+          </p>
+          <span class="nom">Emi</span>
+          <span class="prenom">Ennexy</span>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="box_text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vero eum optio deleniti soluta labore
+            tempora provident, voluptatibus dolor expedita, et est.
+          </p>
+          <span class="nom">Celia</span>
+          <span class="prenom">DaSoeurette</span>
+
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+
+
+
+
+
+
+  </div>
+  <!-- Waves  -->
+  <div style="height: 150px; overflow: hidden;" class="svg_bas">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;">
+      </path>
+    </svg>
+  </div>
+  <!-- Fin waves  -->
 
 </section>
 

@@ -3,6 +3,8 @@ import * as AOS from 'aos';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
 
 
 
@@ -25,7 +27,32 @@ export class AppComponent{
   isEtudiantActive = true; 
   isPlus = true; 
 
+  customOptions_testimonial: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    autoplay: true,
+    dots: true,
+    navSpeed: 200,
+    // navText: ["<span class='material-icons'>arrow_left</span>",
+    //  "<span class='material-icons'>arrow_right</span>"],
+    responsive: {
+      0: {
+        items: 1
+      },
+      490: {
+        items: 1, 
+      },
+      940: {
+        items: 1
+      }
+    },
+    nav: false
+  }
+
   contactForm: FormGroup;
+
   constructor(private fb: FormBuilder, private httpClient: HttpClient) {
     this.contactForm = this.fb.group({
       nom: [''],

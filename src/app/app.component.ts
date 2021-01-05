@@ -33,22 +33,22 @@ export class AppComponent{
     touchDrag: true,
     pullDrag: true,
     autoplay: true,
-    dots: true,
+    dots: false,
+    nav: true,
     navSpeed: 200,
-    // navText: ["<span class='material-icons'>arrow_left</span>",
-    //  "<span class='material-icons'>arrow_right</span>"],
+     navText: ["<span class='material-icons'>keyboard_arrow_left</span>",
+     "<span class='material-icons'>keyboard_arrow_right</span>"],
     responsive: {
       0: {
         items: 1
       },
       490: {
-        items: 1, 
+        items: 1
       },
       940: {
         items: 1
       }
-    },
-    nav: false
+    }
   }
 
   contactForm: FormGroup;

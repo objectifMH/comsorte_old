@@ -193,13 +193,13 @@
 
 </section>
 
-<section class="fourth bg_linear container">
+<section class="fourth bg_linear container" >
   <h4>
     Vous avez besoin de cours particuliers ?
   </h4>
 
   <!-- Buttons -->
-  <div class="text-center text-md-center">
+  <div class="text-center text-md-center" >
     <a [routerLink]="['/main']" fragment="contacter" class="btn  contacter shadow lift mr-1">
       Me contacter</a>
   </div>
@@ -357,7 +357,7 @@
   <div class="price-one" id="pricing">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
           <h2 class="title-price"> Choisissez votre formule </h2>
           <p class="text">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non labore nostrum neque architecto laboriosam
@@ -372,11 +372,11 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" >
           <div class="content">
             <!-- Cours  -->
-            <div class="one " id="cours" [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}">
-              <div class="inner">
+            <div class="one " id="cours" [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}" >
+              <div class="inner" data-aos="fade-left" data-aos-duration="3000">
                 <div class="prix">
                   <span class="amount">15</span>
                   <span class="currency">€</span>
@@ -401,8 +401,8 @@
             <!-- Fin cours -->
 
             <!-- Formations  -->
-            <div class="one" id="formations" [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}">
-              <div class="inner">
+            <div class="one" id="formations" [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}" >
+              <div class="inner" data-aos="fade-right" data-aos-duration="3000">
                 <div class="prix">
                   <span class="amount">25</span>
                   <span class="currency">€</span>

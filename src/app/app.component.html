@@ -23,37 +23,37 @@
         close
       </span>
     </div>
-    
+
     <ul>
-      <li >
-      
+      <li>
+
         <!-- <a href="">
           <span class="nom_prenom">Anais. S.</span>
         </a> -->
       </li>
-      <li >
-        <a href="" data-text="Accueil"  (mouseover)="onChangeMenu('Accueil')" (mouseleave)="onLeave()">Accueil</a>
+      <li (mouseover)="onChangeMenu('Accueil')" (mouseleave)="onLeave()">
+        <a href="" data-text="Accueil">Accueil</a>
 
       </li>
-      <li>
-        <a href="" data-text="Compétences" (mouseover)="onChangeMenu('Compétences')" (mouseleave)="onLeave()">Compétences</a>
+      <li (mouseover)="onChangeMenu('Compétences')" (mouseleave)="onLeave()">
+        <a href="" data-text="Compétences">Compétences</a>
 
       </li>
-      <li>
-        <a href="" data-text="Prix" (mouseover)="onChangeMenu('Prix')" (mouseleave)="onLeave()">Prix</a>
+      <li (mouseover)="onChangeMenu('Prix')" (mouseleave)="onLeave()">
+        <a href="" data-text="Prix">Prix</a>
 
       </li>
-      <li>
-        <a href="" data-text="Testimonial" (mouseover)="onChangeMenu('Testimonial')" (mouseleave)="onLeave()">Testimonial</a>
+      <li (mouseover)="onChangeMenu('Testimonial')" (mouseleave)="onLeave()">
+        <a href="" data-text="Testimonial">Testimonial</a>
 
       </li>
-      <li>
-        <a [routerLink]="['/main']" fragment="contacter" data-text="Contact" (mouseover)="onChangeMenu('Contact')" (mouseleave)="onLeave()">Contact</a>
+      <li (mouseover)="onChangeMenu('Contact')" (mouseleave)="onLeave()">
+        <a [routerLink]="['/main']" fragment="contacter" data-text="Contact">Contact</a>
 
       </li>
     </ul>
-    
-    <h4 [ngClass]="{'active': text_menu !== '', '': text_menu === '' }">
+
+    <h4 [ngClass]="{'active': text_menu !== '', 'fade': text_menu === '' }">
       {{text_menu}}
     </h4>
   </div>
@@ -140,8 +140,63 @@
               Me contacter</a>
           </div>
         </div>
+
+
       </div>
       <!-- Fin Bas  -->
+    </div>
+
+    <div class="container drapeaux">
+      <div class="drapeau">
+        <div>
+
+          <div class="c-flag c-flag__fra"></div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quaerat debitis accusamus ad saepe neque nisi
+          corrupti pariatur modi cupiditate! Dolorum est dolorem, quaerat nemo eveniet quibusdam voluptates nisi
+          accusamus?
+        </p>
+      </div>
+      <div class="drapeau">
+        <div>
+
+          <div class="c-flag c-flag__bra"></div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quaerat debitis accusamus ad saepe neque nisi
+          corrupti pariatur modi cupiditate! Dolorum est dolorem, quaerat nemo eveniet quibusdam voluptates nisi
+          accusamus?
+        </p>
+      </div>
+      <div class="drapeau">
+        <div>
+
+
+          <div class="c-flag c-flag__eng"></div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quaerat debitis accusamus ad saepe neque nisi
+          corrupti pariatur modi cupiditate! Dolorum est dolorem, quaerat nemo eveniet quibusdam voluptates nisi
+          accusamus?
+        </p>
+      </div>
+
+      <!-- <div class="drapeau">
+        <div>
+
+
+          <img src="assets/ES-espagne.png" class="c-flag__esp">
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quaerat debitis accusamus ad saepe neque nisi
+          corrupti pariatur modi cupiditate! Dolorum est dolorem, quaerat nemo eveniet quibusdam voluptates nisi
+          accusamus?
+        </p>
+      </div> -->
+
+
+
     </div>
   </div>
 
@@ -179,26 +234,38 @@
       </span>
       <h4>
         <span class="text_number">+7</span>ans d'expériences</h4>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, ab veniam, sunt inventore error consequuntur
+        neque rerum amet ratione, reiciendis cum nemo sapiente laboriosam nobis minus! Sint ut est doloremque.
+      </p>
     </div>
 
     <div class="skill">
-      
+
       <span class="circle deux" data-aos="zoom-in-up" data-aos-duration="3000"></span>
       <span class="circle cinq" data-aos="zoom-in-up" data-aos-duration="3000"></span>
       <span class="material-icons icon">
         person_pin_circle
       </span>
       <h4><span class="text_number">+14</span> ans à l'étranger</h4>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, ab veniam, sunt inventore error consequuntur
+        neque rerum amet ratione, reiciendis cum nemo sapiente laboriosam nobis minus! Sint ut est doloremque.
+      </p>
     </div>
 
     <div class="skill">
-      
+
       <span class="circle trois" data-aos="zoom-in-up" data-aos-duration="2000"></span>
       <span class="circle quatre" data-aos="zoom-in-up" data-aos-duration="3000"></span>
       <span class="material-icons icon">
         groups
       </span>
       <h4><span class="text_number">+20</span> élèves de ≠ nationalités</h4>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, ab veniam, sunt inventore error consequuntur
+        neque rerum amet ratione, reiciendis cum nemo sapiente laboriosam nobis minus! Sint ut est doloremque.
+      </p>
     </div>
 
   </div>
@@ -206,13 +273,13 @@
 
 </section>
 
-<section class="fourth bg_linear container" >
+<section class="fourth bg_linear container">
   <h4>
     Vous avez besoin de cours particuliers ? Etudiants ? Salariés ?
   </h4>
 
   <!-- Buttons -->
-  <div class="text-center text-md-center" >
+  <div class="text-center text-md-center">
     <a [routerLink]="['/main']" fragment="contacter" class="btn  contacter shadow lift mr-1">
       Me contacter</a>
   </div>
@@ -384,10 +451,10 @@
           </div>
         </div>
 
-        <div class="col-lg-6" >
+        <div class="col-lg-6">
           <div class="content">
             <!-- Cours  -->
-            <div class="one " id="cours" [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}" >
+            <div class="one " id="cours" [ngClass]="{'active': isEtudiantActive, '':!isEtudiantActive}">
               <div class="inner" data-aos="fade-left" data-aos-duration="3000">
                 <div class="prix">
                   <span class="amount">15</span>
@@ -413,7 +480,7 @@
             <!-- Fin cours -->
 
             <!-- Formations  -->
-            <div class="one" id="formations" [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}" >
+            <div class="one" id="formations" [ngClass]="{'active': !isEtudiantActive, '':isEtudiantActive}">
               <div class="inner" data-aos="fade-right" data-aos-duration="3000">
                 <div class="prix">
                   <span class="amount">25</span>
@@ -474,10 +541,10 @@
   </div>
 
   <h2 class="container">
-    Témoignages de mes élèves : 
+    Témoignages de mes élèves :
   </h2>
   <div class="testimonial container ">
-    
+
 
     <owl-carousel-o [options]="customOptions_testimonial">
       <ng-template carouselSlide>

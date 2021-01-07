@@ -124,23 +124,30 @@ header {
             left: 0;
             width: 100%;
             text-align: center;
-            font-size: 3em;
+            font-size: 6.5rem;
             font-weight: 600;
             pointer-events: none;
             background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transform: translateY(-50%);
-            opacity: .55;
+            //opacity: 0;
             transition: 1s ease-in-out;
-            opacity: 0;
             text-transform: uppercase;
         }
 
         h4.active {
             font-size: 5em;
-            opacity: 1;
+            opacity: .60;
+            transition: 1s ease-in-out;
         }
+
+        h4.fade {
+            // opacity: 0;
+            transition: 1s ease-in-out;
+        }
+
+    
     }
 
     .menu_bar.fade_menu {
@@ -435,7 +442,86 @@ section.second {
                     letter-spacing: 1.2px;
                 }
             }
+
+            
         }
+    }
+
+    .drapeaux {
+        // @mixin flag-fra() {
+        //     @include ratio(2 / 3);
+        //     $blue: #002395;
+        //     $white: #FFF;
+        //     $red: #ED2939;
+          
+        //     @include three-columns($blue, $white, $red);
+        //   };
+
+            .drapeau {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                p{
+                    font-size: 0.85rem;
+                    padding: 0px 15px;
+                    font-family: "Poppins", sans-serif;
+                    color: #c780098a;
+                    transition: 0.8s ease-in-out;
+                }
+            }
+
+            .c-flag {
+                transform: scale(.3);
+                box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+
+            }
+
+            .c-flag__fra {
+                width: 220px;
+                height: 147px;
+                position: relative;
+                background-image: -webkit-linear-gradient(left, #002395 0, #002395 33%, #FFF 33%, #FFF 67%, #ED2939 67%, #ED2939 100%);
+                background-image: linear-gradient(90deg, #002395 0, #002395 33%, #FFF 33%, #FFF 67%, #ED2939 67%, #ED2939 100%);
+            }
+
+            .c-flag__bra {
+                margin-left: 30px;
+                width: 220px;
+                height: 154px;
+                position: relative;
+                background-color: #FFE000;
+                background-image: -webkit-linear-gradient(303deg, #009639 0, #009639 75px, transparent 75px), -webkit-linear-gradient(237deg, #009639 0, #009639 75px, transparent 75px), -webkit-linear-gradient(123deg, #009639 0, #009639 75px, transparent 75px), -webkit-linear-gradient(57deg, #009639 0, #009639 75px, transparent 75px);
+                background-image: linear-gradient(147deg, #009639 0, #009639 75px, transparent 75px), linear-gradient(213deg, #009639 0, #009639 75px, transparent 75px), linear-gradient(-33deg, #009639 0, #009639 75px, transparent 75px), linear-gradient(33deg, #009639 0, #009639 75px, transparent 75px);
+                
+                &::before {
+                    
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 77px;
+                    height: 77px;
+                    border-radius: 50%;
+                    top: 39px;
+                    left: 72px;
+                    background-color: #012169;
+                    background-image: -webkit-radial-gradient(17px 116px circle, #012169 88px, transparent 89px), -webkit-radial-gradient(17px 116px circle, #FFFFFF 94px, transparent 95px);
+                    background-image: radial-gradient(circle at 17px 116px, #012169 88px, transparent 89px), radial-gradient(circle at 17px 116px, #FFFFFF 94px, transparent 95px);
+                }
+            }
+
+            .c-flag__eng { 
+                width: 220px;
+                height: 132px;
+                background-color: #FFF;
+                background-image: -webkit-linear-gradient(top, transparent, transparent 53px, #c8102e 53px, #c8102e 79px, transparent 79px, transparent 100%), -webkit-linear-gradient(left, transparent, transparent 97px, #c8102e 97px, #c8102e 123px, transparent 123px, transparent 100%);
+                background-image: linear-gradient(180deg, transparent, transparent 53px, #c8102e 53px, #c8102e 79px, transparent 79px, transparent 100%), linear-gradient(90deg, transparent, transparent 97px, #c8102e 97px, #c8102e 123px, transparent 123px, transparent 100%);
+            }
+
+            .c-flag__esp {
+                //width: 66px;
+                margin-left: 30px;
+                padding: 15px 30px;
+            }
     }
 }
 
@@ -476,7 +562,7 @@ section.third {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
         margin-top: 50px;
 
         .skill {
@@ -487,7 +573,7 @@ section.third {
             text-transform: uppercase;
             border: $color_second 3px solid;
             font-weight: 700;
-            transition: 0.4s ease-in-out;
+            transition: 0.8s ease-in-out;
             margin-top: 30px;
             width: 25%;
             box-shadow: 3px 4px 12px rgba(0,0,0,.35);  
@@ -527,9 +613,26 @@ section.third {
                 margin-bottom: 35px;
             }
 
+            p {
+                font-size: 0.85rem;
+                padding: 0px 15px;
+                font-family: "Poppins", sans-serif;
+                color: #c780098a;
+                opacity: 0;
+                transition: .8s ease-in-out;
+                height: 0;
+
+            }
+
             &:hover {
                 transform: scale(1.05);
                 box-shadow: 3px 4px 12px rgba(0,0,0,.55); 
+
+                p {
+                    opacity: 1;
+                    padding: 45px 15px 5px;
+                    height: 100%;
+                }
             }
         }
     }
@@ -1253,6 +1356,8 @@ section.seven {
                         position: absolute;
                         top: 56px;
                         right: 53px;
+                        animation: Tache 5s infinite alternate-reverse;           
+
                     }
 
                     .tache {
@@ -1260,7 +1365,7 @@ section.seven {
                         top: -17px;
                         right: 39px;
                         width: 394px;
-                        animation: Rotation 15s infinite alternate-reverse;           
+                        animation: Tache 6s infinite alternate-reverse;           
                         
                     }
                     
@@ -1537,6 +1642,16 @@ section.seven {
     
     to {
         transform: rotate(360deg) scale(1.15);
+    }
+}
+
+@keyframes Tache {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    
+    to {
+        transform: rotate(0deg) scale(1.15);
     }
 }
 

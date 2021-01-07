@@ -27,6 +27,8 @@ export class AppComponent{
   isEtudiantActive = true; 
   isPlus = true; 
 
+  text_menu = "";
+
   customOptions_testimonial: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -148,6 +150,15 @@ export class AppComponent{
 
   clickIcon(){
     console.log("plus - menos");
+  }
+
+  onChangeMenu(str) {
+    console.log(str);
+    this.text_menu = str;
+  }
+
+  onLeave() {
+    this.text_menu = "";
   }
 }
 

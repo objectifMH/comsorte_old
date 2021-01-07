@@ -85,7 +85,7 @@ header {
         ul {
             position: relative;
             animation: .6s ease-in-out;
-            width: 50vw;
+            width: 65vw;
             height: 100%;
             list-style: none;
             background: rgb(241 236 217);
@@ -94,47 +94,52 @@ header {
             transition: .5s ease-in-out;
 
             li {
+                margin: auto;
                 margin-top: 45px;
+                text-align: center;
+                transition: .6s ease-in-out;
+
 
                 a {
                     color: #b36969;
                     font-size: 2.2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-weight: 600;
                     text-decoration: none;
-                    //font-family: 'Cookie', cursive !important;
+                    z-index: 20;
 
-                    //text-transform: uppercase;
                     font-weight: 700;
-                    transition: 0.4s ease-in-out;
-
-                    background: -webkit-linear-gradient(150deg, $color_second 0%, $color_primary 100%);
-                    background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
-
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-
-                    &:hover {
-                        letter-spacing: 1.4px;
-                    //     background:#862222;
-                        
-                    // -webkit-background-clip: text;
-                    //-webkit-text-fill-color: transparent;
-                    }
-
-                    .nom_prenom {
-                        color:#862222;
-                        font-size: 3rem;  
-                        font-weight: 700;
-                        position: relative;
-                        font-family: 'Cookie', cursive !important;
-                    } 
-
+                    color: $color-second;
                     transition: .6s ease-in-out;
+                   
+                }
+
+                &:hover {
+                    transform: scale(1.3);
                 }
             }
+        }
+
+        h4 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            font-weight: 600;
+            pointer-events: none;
+            background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: translateY(-50%);
+            opacity: .55;
+            transition: 1s ease-in-out;
+            opacity: 0;
+            text-transform: uppercase;
+        }
+
+        h4.active {
+            font-size: 5em;
+            opacity: 1;
         }
     }
 
@@ -154,7 +159,6 @@ header.opacity_true {
             color: white !important;
         }
     }
-
     
     .nav_header {
         .logo {
@@ -215,12 +219,14 @@ section.first {
 
                 .c_premier {
                     font-size: 11rem;
+                    display: inline-block;
                     position: relative;
                     top: 39px;
                     left: 40px;
                     color: #ebe2bf;
                     -webkit-text-fill-color: #862222;
                     font-weight: 100;
+
                 }
 
                 // .s_premier {
@@ -230,7 +236,8 @@ section.first {
 
                 &::after {
                     content: "";
-                    bottom: 0;               
+                    bottom: 0;    
+                    animation: Etirement 4s infinite alternate-reverse;           
                     
                     left: 45%;
                     width: 22%;
@@ -246,7 +253,6 @@ section.first {
             font-size: 3.2rem;
             font-weight: 400;
             margin-top: 90px;
-
             font-family: 'Cookie', cursive !important;
             letter-spacing: 2px;
             text-align: center;     
@@ -492,6 +498,9 @@ section.third {
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+            position: relative;
+            overflow: hidden;
             
             h4 {      
                 font-size: 1rem;
@@ -503,9 +512,8 @@ section.third {
                 text-align: center;
             }
             
-            span {
+            .icon, .text_number {
                 font-size: 3rem;
-                //color: white;
                 background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -947,12 +955,10 @@ section.five.price{
 
 section.six.testimonial {
 
-    padding-top: 170px;
-    padding-bottom: 250px;
-
+    padding-top: 80px;
+    //padding-bottom: 100px;
     position: relative;
-
-    min-height: 100vh;
+    //min-height: 100vh;
     -webkit-background-size: 100%; 
     -moz-background-size: 100%; 
     -o-background-size: 100%; 
@@ -1021,6 +1027,25 @@ section.six.testimonial {
         }
     }
 
+    img {
+        width: 500px;
+    }
+
+    h2 {
+        font-size: 2.6em;
+        background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Poppins", sans-serif !important;
+        font-weight: 700;
+        position: relative;
+        margin-top: -60px;
+        margin-bottom: 40px;
+        padding: 5px;
+
+    
+    }
+
     .testimonial {
 
         
@@ -1073,10 +1098,8 @@ section.six.testimonial {
         {
             span {
                 
-            color:green !important;
             font-size:14px;
             margin:5px;padding:4px 7px;
-            background: red !important;
             display:inline-block;
             cursor:pointer;
             border-radius:3px; 
@@ -1085,17 +1108,8 @@ section.six.testimonial {
 
         
     }
-        
-    
-
     
 }
-
-
-
-
-
-
 
 section.seven {
 
@@ -1148,9 +1162,7 @@ section.seven {
                 flex-direction: column;
                 font-size: 1.2em;
                 color: white;
-                padding: 15px 0px 30px;
-        
-                
+                padding: 15px 0px 30px;        
             }
 
                 font-family: "Poppins", sans-serif;
@@ -1248,6 +1260,8 @@ section.seven {
                         top: -17px;
                         right: 39px;
                         width: 394px;
+                        animation: Rotation 15s infinite alternate-reverse;           
+                        
                     }
                     
                     .reseaux_contact {
@@ -1298,6 +1312,8 @@ section.seven {
                             letter-spacing: 1.7px;
                         }
 
+                        
+
                         .form-group {
                             position: relative;
                             margin: 1rem 0;
@@ -1330,7 +1346,6 @@ section.seven {
 
                                 &:before {
                                     left: 50%;
-
                                 }
 
                                 &:after {
@@ -1500,3 +1515,87 @@ section.seven {
         }
       }
   }
+
+  // Animations 
+
+  @keyframes Etirement {
+    from {
+        width: 18%;
+        left: 44%;
+    }
+    
+    to {
+        width: 22%;
+        left: 46%;
+    }
+}
+
+@keyframes Rotation {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    
+    to {
+        transform: rotate(360deg) scale(1.15);
+    }
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(10deg, transparent 5% , #862222c2);
+    position: absolute;
+    animation: 20s Rotation infinite;
+    
+
+    &.un {
+        width: 70px;
+        height: 70px;
+        top: 2px;
+        right: -24px;
+        transform: rotate(162deg);
+        animation-delay: 5s;
+        border-radius: 50%;
+    }
+
+    &.deux {
+        width: 40px;
+        height: 40px;
+        top: 252px;
+        right: 39px;
+        transform: rotate(21deg);
+        animation-delay: 10s;
+        border-radius: 50%;
+    }
+
+
+    &.trois {
+        width: 90px;
+        height: 90px;
+        right: -49px;
+        transform: rotate(321deg);
+        animation-delay: 15s;
+        border-radius: 50%;
+    }
+
+    &.quatre {
+        width: 60px;
+        height: 60px;
+        right: 105px;
+        top: -36px;
+        transform: rotate(321deg);
+        animation-delay: 15s;
+        border-radius: 50%;
+    }
+
+    &.cinq {
+        width: 60px;
+        height: 60px;
+        right: 111px;
+        top: 181px;
+        transform: rotate(321deg);
+        animation-delay: 15s;
+        border-radius: 50%;
+    }
+
+}

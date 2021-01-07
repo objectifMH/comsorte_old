@@ -23,33 +23,39 @@
         close
       </span>
     </div>
+    
     <ul>
-      <li>
+      <li >
+      
         <!-- <a href="">
           <span class="nom_prenom">Anais. S.</span>
         </a> -->
       </li>
-      <li>
-        <a href="">Accueil</a>
+      <li >
+        <a href="" data-text="Accueil"  (mouseover)="onChangeMenu('Accueil')" (mouseleave)="onLeave()">Accueil</a>
 
       </li>
       <li>
-        <a href="">Compétences</a>
+        <a href="" data-text="Compétences" (mouseover)="onChangeMenu('Compétences')" (mouseleave)="onLeave()">Compétences</a>
 
       </li>
       <li>
-        <a href="">Prix</a>
+        <a href="" data-text="Prix" (mouseover)="onChangeMenu('Prix')" (mouseleave)="onLeave()">Prix</a>
 
       </li>
       <li>
-        <a href="">Testimonial</a>
+        <a href="" data-text="Testimonial" (mouseover)="onChangeMenu('Testimonial')" (mouseleave)="onLeave()">Testimonial</a>
 
       </li>
       <li>
-        <a href="">Contact</a>
+        <a [routerLink]="['/main']" fragment="contacter" data-text="Contact" (mouseover)="onChangeMenu('Contact')" (mouseleave)="onLeave()">Contact</a>
 
       </li>
     </ul>
+    
+    <h4 [ngClass]="{'active': text_menu !== '', '': text_menu === '' }">
+      {{text_menu}}
+    </h4>
   </div>
   <!-- fin nav bar menu droit -->
 </header>
@@ -90,7 +96,6 @@
   </div>
   <!-- Fin Waves  -->
 </section>
-
 
 <section class="second">
 
@@ -167,25 +172,33 @@
   <div class="container skills">
 
     <div class="skill">
-      <span class="material-icons">
+      <span class="circle un" data-aos="zoom-in-up" data-aos-duration="4000"></span>
+      <span class="circle quatre" data-aos="zoom-in-up" data-aos-duration="4000"></span>
+      <span class="material-icons icon ">
         today
       </span>
       <h4>
-        <span>+7</span>ans d'expériences</h4>
+        <span class="text_number">+7</span>ans d'expériences</h4>
     </div>
 
     <div class="skill">
-      <span class="material-icons">
+      
+      <span class="circle deux" data-aos="zoom-in-up" data-aos-duration="3000"></span>
+      <span class="circle cinq" data-aos="zoom-in-up" data-aos-duration="3000"></span>
+      <span class="material-icons icon">
         person_pin_circle
       </span>
-      <h4><span>+14</span> ans à l'étranger</h4>
+      <h4><span class="text_number">+14</span> ans à l'étranger</h4>
     </div>
 
     <div class="skill">
-      <span class="material-icons">
+      
+      <span class="circle trois" data-aos="zoom-in-up" data-aos-duration="2000"></span>
+      <span class="circle quatre" data-aos="zoom-in-up" data-aos-duration="3000"></span>
+      <span class="material-icons icon">
         groups
       </span>
-      <h4><span>+20</span> élèves de ≠ nationalités</h4>
+      <h4><span class="text_number">+20</span> élèves de ≠ nationalités</h4>
     </div>
 
   </div>
@@ -195,7 +208,7 @@
 
 <section class="fourth bg_linear container" >
   <h4>
-    Vous avez besoin de cours particuliers ?
+    Vous avez besoin de cours particuliers ? Etudiants ? Salariés ?
   </h4>
 
   <!-- Buttons -->
@@ -331,7 +344,6 @@
 
 </section>
 
-
 <section class="five price">
 
   <!-- Waves  -->
@@ -438,7 +450,6 @@
 
 </section>
 
-
 <section class="six testimonial">
   <!-- Waves  -->
   <div style="height: 150px; overflow: hidden;" class="svg_haut">
@@ -449,6 +460,7 @@
   </div>
   <!-- Fin waves  -->
 
+  <!-- <img src="assets/comsorte1.svg"> -->
 
   <div class="container_first">
     <!-- Title  -->
@@ -461,7 +473,11 @@
 
   </div>
 
+  <h2 class="container">
+    Témoignages de mes élèves : 
+  </h2>
   <div class="testimonial container ">
+    
 
     <owl-carousel-o [options]="customOptions_testimonial">
       <ng-template carouselSlide>

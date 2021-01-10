@@ -698,6 +698,18 @@ section.five.faq {
         }     
     }
 
+    .text {
+        font-size: 1rem;
+        background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 0.2px;
+        text-align: center;
+        margin: 0 auto;
+        font-family: "Poppins", sans-serif !important;
+        margin-top: 90px;
+    }
+
     .faq {
         display: flex;
         flex-direction: row;
@@ -707,7 +719,7 @@ section.five.faq {
         height: 100%;
         position: relative;
         padding-bottom: 280px;  
-        padding-top: 100px;
+        padding-top: 30px;
         
         .faq_haut {
             width: 50%;
@@ -1225,7 +1237,6 @@ section.seven {
         position: relative;
         width: 70%;
         margin: 0 auto;
-        padding-bottom: 200px;  
         padding-top: 80px;
 
         .infos_personnelles {
@@ -1295,6 +1306,21 @@ section.seven {
                                 font-size: 1.6em;
                                 padding: 5px;
                                 border: 3px solid;
+                                animation: Zoom 5s infinite alternate-reverse;
+                                
+                            }
+
+                            .location {
+                                animation-delay: .5s;
+                            }
+
+                            .phone{
+                                animation-delay: .1s !important;
+                            }
+
+                            .mail {
+                                animation-delay: 1.5s;
+
                             }
                 
                             p {
@@ -1348,8 +1374,6 @@ section.seven {
                         top: 56px;
                         right: 53px;
                         //animation: Tache 5s infinite alternate-reverse;           
-                    
-                        
                     }
 
                     .tache {
@@ -1556,6 +1580,36 @@ section.seven {
             }
         }
 }
+
+// -- FOOTER -- //
+footer {
+    svg {
+        background: #ebe2bf;
+        
+    }
+
+    div {
+        background: $color-second;
+        h5 {    
+            font-size: 1rem;
+            font-weight: 700;
+            color: white; 
+            padding: 5px 10px;
+            font-family: "Poppins", sans-serif !important;
+
+            span {
+                font-size: .7rem;
+            }
+        }
+
+    }
+
+}
+    
+
+
+// -- FIN FOOTER -- //
+
 
 
 // Slider >>

@@ -132,11 +132,18 @@ export class AppComponent{
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
     let element = document.querySelector('header');
+    let down = document.querySelector(".down");
+    
     if (window.pageYOffset > element.clientHeight) {
       element.classList.add('opacity_true');
+      down.classList.add('fade');
+      down.classList.remove('show');
       //Scrolling 
     } else {
       element.classList.remove('opacity_true');
+      down.classList.remove('fade');
+      down.classList.add('show');
+
     }
   }
 

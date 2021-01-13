@@ -381,9 +381,11 @@ section.second {
             .box_img {
                 position: absolute;
                 top: 80px;
+                border: 6px dotted $color_primary;
 
                 img {
                     height: 460px;
+                    transform: rotate(-4deg) translate(-15px, -33px) scale(1.12);
                 }
             }
         }
@@ -975,8 +977,19 @@ section.five.faq {
             
 
             .box_img {
-                img {
+                border: 6px dotted $color_primary;
+                border-radius: 50%;
+                .faq_img {
                     height:360px;
+                    transform: scale(.85);
+                    
+                }
+
+                .dots {
+                    width: 200px;
+                    position: absolute;
+                    bottom: 0;
+                    left: -10px;
                 }
             }
         }
@@ -1534,6 +1547,7 @@ section.seven {
                         letter-spacing: 1.7px;
                     }
 
+                    // infos spans
                     .info_container {
                         margin-top: 40px;
                         div {
@@ -1595,6 +1609,8 @@ section.seven {
                         }
                     } 
 
+                    
+
                     .circle_img {
                         -webkit-clip-path: circle(50% at 50% 50%);
                         clip-path: circle(50% at 50% 50%);
@@ -1628,6 +1644,7 @@ section.seven {
                         display: none;
                     }
                     
+                    // Git hub , linkd //
                     .reseaux_contact {
                         width: 150px;
                         margin: auto;
@@ -1653,8 +1670,10 @@ section.seven {
                             }
                         }   
                     }
+                    // Fin git hub , linkd //
                 }
 
+                // Envoyez Message //
                 .contact-form {
                     position: relative;
                     background:  -webkit-linear-gradient(212deg, #ffc107cc -25%, #862222c2 90%);
@@ -1701,7 +1720,7 @@ section.seven {
                                     height: 5px;
                                     top: 50%;
                                     transform: translateY(-50%);
-                                    background: $color_second;
+                                    background: transparent;
                                     transition: 0.3s;
 
                                 }
@@ -1720,7 +1739,7 @@ section.seven {
                             
                             label {  
                                 top:0;
-                                transform: translateY(-50%);
+                                transform: translateY(-100%);
                                 left: 25px;
                                 font-size: 0.8rem;
                             }  
@@ -1800,6 +1819,7 @@ section.seven {
                         }
                     }
                 }
+                // FIN Envoyez Message //
         }
 
         .form-control.ng-dirty.ng-invalid.ng-touched

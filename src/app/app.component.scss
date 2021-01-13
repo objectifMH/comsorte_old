@@ -575,19 +575,52 @@ section.objectif {
 
     .objectifs {
         width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 140px;
+
+        .container_text {
+            height: 100%;
+            width: 30%;
+            h4 {
+                font-size: 1.4rem;
+                text-align: left;
+                color: $color-second;
+                font-weight: bolder;
+                display: flex;
+                align-items: center;
+
+                span {
+                    background: $color-second;
+                    border-radius: 50%;
+                    color: white;
+                    padding: 3px;
+                    margin-right: 5px;
+                    width: 32px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                color: $color_second;
+                padding: 3px 15px;
+            }
+        }
+
         .container_img {
             width: 460px;
             height: 460px;
-            margin: 140px auto;
+            margin-left: 60px;
             background: $color_primary;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;         
-
-
-            
 
             img {
                 width: 400px;
@@ -611,7 +644,7 @@ section.objectif {
             .droite_haut {
                 position: absolute;
                 top: 28px;
-                right: -210px;
+                right: -230px;
                 display: flex;
                 align-items: center; 
                 
@@ -638,7 +671,7 @@ section.objectif {
             .droite_mil {
                 position: absolute;
                 top: 140px;
-                right: -250px;
+                right: -270px;
                 display: flex;
                 align-items: center; 
                 
@@ -665,7 +698,7 @@ section.objectif {
             .droite_milieux_bas {
                 position: absolute;
                 top: 271px;
-                right: -214px;
+                right: -234px;
                 display: flex;
                 align-items: center; 
                 
@@ -692,7 +725,7 @@ section.objectif {
             
             .droite_bas {
                 position: absolute;
-                top: 401px;
+                top: 421px;
                 right: -149px;
                 display: flex;
                 align-items: center; 

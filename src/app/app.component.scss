@@ -800,6 +800,7 @@ section.third {
         align-items: baseline;
         padding-bottom: 200px;  
         padding-top: 100px;
+        z-index: 20;
 
         .skill {
             background: white;
@@ -832,6 +833,7 @@ section.third {
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+                z-index: 20;
             }
             
             .icon, .text_number {
@@ -839,6 +841,7 @@ section.third {
                 background: -webkit-linear-gradient(212deg, #ffc107cc 36%, #862222c2 90%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                z-index: 20;
             }
 
             .material-icons {
@@ -1461,7 +1464,7 @@ section.seven {
     background: $color_primary;
     min-height: 400px;
     position: relative;
-    padding-top: 80px;
+    padding-top: 160px;
 
     .title {
         text-align: center;
@@ -1847,8 +1850,7 @@ section.seven {
 // -- FOOTER -- //
 footer {
     svg {
-        background: #ebe2bf;
-        
+        background: #ebe2bf;     
     }
 
     div {
@@ -1864,7 +1866,6 @@ footer {
                 font-size: .7rem;
             }
         }
-
     }
 
 }
@@ -1986,6 +1987,7 @@ footer {
     background: linear-gradient(10deg, transparent 5% , $color_primary);
     position: absolute;
     animation: 20s Rotation infinite;
+    z-index: 10;
     
 
     &.un {

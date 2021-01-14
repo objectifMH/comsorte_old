@@ -312,7 +312,7 @@ section.first {
         color: $color-second;
         border-radius: 50%;
         bottom: 0;
-        animation: TopBottom 5s infinite alternate-reverse;
+        animation: TopBottom 4s infinite alternate-reverse;
     }
 }
 
@@ -802,7 +802,7 @@ section.third {
         padding-top: 100px;
 
         .skill {
-            background: $color_primary;
+            background: white;
             color: $color_second;
             border-radius: 12px;
             padding: 30px 6px;
@@ -1885,10 +1885,10 @@ footer {
     }
 
     ::ng-deep .owl-theme .owl-nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-160%);
+        // width: 100%;
+        // display: flex;
+        // justify-content: space-between;
+        // transform: translateX(-50%);
     }
 
     ::ng-deep .owl-theme .owl-nav .owl-prev{
@@ -1897,11 +1897,14 @@ footer {
 
         span {
             position: relative;
-            left: -90px;
-            background: transparent !important;
+            //left: -90px;
             color: white !important;
-            font-size: 6rem;
             transition: .7s ease-in-out;
+            border: 4px solid white;
+            font-size: 3rem;
+            background: $color-second;
+            border-radius: 50%;
+            opacity: 0.9;
 
             &:hover {
                 color: $color_second !important;
@@ -1911,18 +1914,24 @@ footer {
     }
 
   ::ng-deep .owl-theme .owl-nav .owl-next{
-    position: relative;  
-    background: transparent !important;
+    position: relative; 
+    background: transparent !important; 
       span {
         position: relative;
         color: white !important;
-        font-size: 6rem;
-        right: -90px;
+        
+        //right: -90px;
         transition: .7s ease-in-out;
+        border: 4px solid white;
+        font-size: 3rem;
+        background: $color-second;
+        border-radius: 50%;
+        opacity: 0.8;
+
 
         &:hover {
-            color: $color_second !important;
-            transform: scale(1.3);
+            transform: scale(1.15);
+            opacity: 1;
         }
       }
   }
@@ -1971,12 +1980,10 @@ footer {
     }
 }
 
-
-
 .circle {
     width: 100px;
     height: 100px;
-    background: linear-gradient(10deg, transparent 5% , #862222c2);
+    background: linear-gradient(10deg, transparent 5% , $color_primary);
     position: absolute;
     animation: 20s Rotation infinite;
     

@@ -962,7 +962,7 @@ section.five.faq {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: end;
         width: 100%;
         height: 100%;
         position: relative;
@@ -1035,6 +1035,7 @@ section.five.faq {
                     margin: 0;
                     display: flex;
                     align-items: center;
+                    transition: .4s ease-in-out;
                 }
                 .icon {
                     position: relative;
@@ -1061,13 +1062,13 @@ section.five.faq {
                 margin-left: 21px;
                 margin-top: 12px;
                 opacity: 0;
-                height: 0;
-                transition: .6s ease-in-out;
+                max-height: 0;
+                transition: all .6s ease-in-out;
                 
                 p {
                     padding: 1rem .8rem;
                     line-height: 1.2;
-                    transition: .6s ease-in-out;
+                    transition: .5s ease-in-out;
 
                 }
             }   
@@ -1082,7 +1083,8 @@ section.five.faq {
             
                 ~ .panel {   
                     opacity: 1;
-                    height: 100%;    
+                     //height: 200px;  
+                    max-height: calc(200px);
                 }
 
                 ~ .accordion {

@@ -270,6 +270,11 @@ section.first {
             font-family: 'Poppins', sans-serif !important; 
         }
 
+        .container_phone {
+            display: flex;
+            justify-content: center;
+        }
+
         .savoir_plus {
             background: $color_second;
             color: $color_primary;
@@ -280,8 +285,15 @@ section.first {
             font-weight: 700;
             transition: 0.4s ease-in-out;
             margin-top: 20px;
-            font-size: .7rem;
+            font-size: 1rem;
             cursor: pointer;
+            display: flex;
+            justify-content: space-around;
+            max-width: 300px;
+
+            .phone {
+                margin-right: 15px;
+            }
 
             &:hover {
                 letter-spacing: 1.2px !important;
@@ -398,7 +410,8 @@ section.second {
 
             .nom_prenom {
                 color:#862222;
-                font-size: 3.95rem;  
+                font-size: 2.6rem;  
+                line-height: 3rem;
                 font-weight: 700;
                 bottom: -5px;
                 position: relative;
@@ -429,6 +442,10 @@ section.second {
                 line-height: 1;   
                 font-weight: 500;
                 font-family: 'Cookie', cursive !important;
+
+                span {
+                    margin-left: 20px;
+                }
             }
 
             .contacter {
@@ -477,7 +494,7 @@ section.second {
             .c-flag {
                 transform: scale(.3);
                 box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
-
+                border-radius: 50%;
             }
 
             .c-flag__fra {
@@ -890,7 +907,7 @@ section.fourth {
 
 
     h4 {
-        font-size: 2.7rem;
+        font-size: 2.4rem;
         color: white;
         font-family: 'Cookie', cursive !important;
         letter-spacing: 1.7px;
@@ -1029,6 +1046,7 @@ section.five.faq {
                 h5 {
                     margin: 0;
                     font-weight: 600;
+                    font-size: 1rem;
                 }
 
                 label {
@@ -1053,8 +1071,6 @@ section.five.faq {
                     font-size: 2rem;
                     transition: 1s ease-in-out;
                 }
-                
-
             }
             
             .panel {
@@ -1416,16 +1432,12 @@ section.six.testimonial {
                 font-family: 'Cookie', cursive !important;
                 letter-spacing: 2px;
 
-                &:before, &:after {
+                &:before {
                     @extend .material-icons;
                     content: 'format_quote';
                     font-size: 3.4em;
                     color: #f3d561;
                     transition: 0.5s ease-in-out;
-                }
-
-                &:after {
-                    position: absolute;
                 }
 
             }
